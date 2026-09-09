@@ -9,7 +9,7 @@ Uma calculadora divertida para estimar o valor financeiro das suas pausas remune
 
 ![cocoladora](og-image.png)
 
-A imagem `og-image.png` tem 1200 × 630 pixels. Antes de publicar, substitua **todas** as ocorrências de `https://cocoladora.example` em `index.html` pelo domínio HTTPS público definitivo. O domínio é um marcador reservado, não um endereço de produção. As URLs absolutas de Open Graph e Twitter devem estar presentes no HTML, sem depender de JavaScript. Hospede os arquivos estáticos com acesso público, incluindo a imagem e os ícones. O servidor local não é destinado à produção.
+A imagem `og-image.png` tem 1200 × 630 pixels. A versão publicada está em [cocoladora-lime.vercel.app](https://cocoladora-lime.vercel.app/). As URLs absolutas de Open Graph e Twitter estão no HTML, sem depender de JavaScript. Hospede os arquivos estáticos com acesso público, incluindo a imagem e os ícones. O servidor local não é destinado à produção.
 
 </div>
 
@@ -95,9 +95,9 @@ Porque alguém precisava responder, com dados, à pergunta:
 
 O cocoladora transforma uma dúvida existencial em gráficos, números e uma quantidade questionável de orgulho.
 
-## ⚠️ Antes de publicar
+## 🔗 Compartilhamento
 
-As URLs `https://cocoladora.example` presentes no HTML são apenas marcadores. Substitua-as pelo domínio público definitivo para que os previews de compartilhamento funcionem corretamente.
+O card permite baixar o extrato personalizado em PNG ou copiar o link público de produção. O link abre a calculadora; os valores do extrato não são colocados na URL, porque os dados permanecem somente no navegador de quem fez o cálculo.
 
 ## 🤝 Contribuições
 

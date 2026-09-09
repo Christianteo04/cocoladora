@@ -3,6 +3,7 @@ const $ = (id) => document.getElementById(id);
 const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 const number = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
 const KEY = 'cocoladora-v1';
+const PRODUCTION_URL = 'https://cocoladora-lime.vercel.app/';
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { /* Continua funcionando sem armazenamento. */ }
 if (typeof saved !== 'object' || Array.isArray(saved)) saved = {};
@@ -115,9 +116,7 @@ $('download-card').addEventListener('click', () => {
   }, 'image/png');
 });
 $('copy-link').addEventListener('click', async () => {
-  const url = new URL(location.href); url.hash = ''; url.search = '';
-  if (['localhost', '127.0.0.1', '[::1]'].includes(url.hostname) || url.protocol === 'file:') { $('share-status').textContent = 'O app está rodando localmente. Baixe o card agora; o link poderá ser compartilhado quando o site for publicado.'; return; }
-  try { await navigator.clipboard.writeText(url.href); $('share-status').textContent = 'Link copiado! Pode mandar no grupo.'; }
+  try { await navigator.clipboard.writeText(PRODUCTION_URL); $('share-status').textContent = 'Link de produção copiado! Pode mandar no grupo.'; }
   catch { $('share-status').textContent = 'Não foi possível copiar automaticamente. Copie o endereço na barra do navegador.'; }
 });
 calculate(false); renderHistory();
