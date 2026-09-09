@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101216">
+  <title>Cagômetro | Calculadora de Cagada Remunerada</title>
+  <meta name="description" content="Descubra quanto você ganha cagando no trabalho. Calcule sua pausa remunerada, acompanhe o tempo no trono e compartilhe seu extrato com a firma.">
+  <!-- Antes de publicar, substitua https://cagometro.example pelo domínio real em todas as tags abaixo. -->
+  <link rel="canonical" href="https://cagometro.example/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Cagômetro">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cagometro.example/">
+  <meta property="og:title" content="Sua pausa vale dinheiro. 💸 | Cagômetro">
+  <meta property="og:description" content="Quanto você ganha no trono da firma? Calcule sua cagada remunerada. O RH não precisa saber.">
+  <meta property="og:image" content="https://cagometro.example/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Cagômetro: Sua pausa vale dinheiro. Um trono de porcelana com coroa e moedas douradas.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cagômetro — Sua pausa vale dinheiro.">
+  <meta name="twitter:description" content="Calcule sua cagada remunerada. O RH não precisa saber.">
+  <meta name="twitter:image" content="https://cagometro.example/og-image.png">
+  <meta name="twitter:image:alt" content="Sua pausa vale dinheiro. Calcule sua cagada remunerada no Cagômetro.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cagômetro","description":"Calculadora divertida de pausas remuneradas no trabalho.","applicationCategory":"EntertainmentApplication","operatingSystem":"Any","inLanguage":"pt-BR","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"}}</script>
+</head>
+<body>
+  <a class="skip" href="#calculadora">Pular para a calculadora</a>
+  <header class="header shell">
+    <a class="brand" href="#" aria-label="Cagômetro, início"><span class="brand-icon" aria-hidden="true">🧻</span>Cagômetro<span class="brand-dot">®</span></a>
+    <nav aria-label="Navegação principal"><a href="#calculadora">Calculadora</a><a href="#trono">Modo trono</a></nav>
+    <button class="theme-toggle" id="theme" aria-label="Ativar tema claro" title="Trocar tema">☀</button>
+  </header>
+  <main class="shell">
+    <div class="first-screen">
+    <section class="hero" aria-labelledby="headline">
+      <div class="hero-heading">
+      <div class="eyebrow">O SEU TEMPO É DINHEIRO. TODO ELE.</div>
+      <h1 id="headline">Faça do seu número 2<br>uma <span>renda número 1.</span></h1>
+      </div>
+      <div class="hero-aside">
+      <p>A firma paga. A natureza chama.<br>Descubra quanto rende essa pausa.</p>
+      <div class="hero-note"><span aria-hidden="true">↳</span> Cálculo sério. Motivo nem tanto.</div>
+      </div>
+      <div class="hero-stamp" aria-hidden="true"><span>PAUSA</span><strong>100%</strong><span>REMUNERADA</span></div>
+    </section>
+
+    <section class="calculator-grid" id="calculadora" aria-label="Calculadora de cagada remunerada">
+      <form id="calculator" class="panel input-panel">
+        <div class="section-kicker"><span>01 / O EXPEDIENTE</span><span aria-hidden="true">↗</span></div>
+        <h2>Vamos fazer as contas.</h2>
+        <p class="muted">Seu salário tem um lado que você não conhece.</p>
+        <label for="salary">Salário mensal <span>bruto, sem julgamentos</span></label>
+        <div class="money-input"><span>R$</span><input id="salary" name="salary" type="text" inputmode="decimal" value="3.000,00" autocomplete="off" required aria-describedby="salary-help"></div>
+        <span id="salary-help" class="sr-only">Digite o valor em reais, por exemplo 3.000,00.</span>
+        <div class="input-row"><div><label for="hours">Horas por dia</label><div class="unit-input"><input id="hours" type="number" min="1" max="24" step="0.5" value="8" required><span>h / dia</span></div></div><div><label for="days">Dias por mês</label><div class="unit-input"><input id="days" type="number" min="1" max="31" value="22" required><span>dias</span></div></div></div>
+        <label for="minutes" class="range-label">Tempo no banheiro por dia <output id="minutes-value" for="minutes">15 min</output></label>
+        <input id="minutes" type="range" min="1" max="60" value="15">
+        <div class="range-captions"><span>Visita expressa</span><span>Reunião estratégica</span></div>
+        <button class="button primary" type="submit">Calcular meu lucro <span aria-hidden="true">→</span></button>
+        <p class="privacy">⌑ Seus dados ficam só neste navegador.</p>
+      </form>
+
+      <article class="panel receipt" aria-labelledby="receipt-title">
+        <div class="receipt-head"><span class="section-kicker">02 / O RETORNO</span><span class="receipt-icon" aria-hidden="true">🧾</span></div>
+        <h2 id="receipt-title">Seu extrato do trono</h2>
+        <div class="receipt-rule"></div>
+        <p class="receipt-label">POR MÊS, A NATUREZA TE RENDE</p>
+        <div class="big-money" id="monthly">R$ 93,75</div>
+        <p class="result-caption">Dinheiro que não foi por água abaixo.</p>
+        <dl class="receipt-details"><div><dt>Por dia útil</dt><dd id="daily">R$ 4,26</dd></div><div><dt>Por ano <span>sem contar o 13º</span></dt><dd id="yearly">R$ 1.125,00</dd></div></dl>
+        <div class="receipt-rule"></div>
+        <div class="receipt-stats"><div><span aria-hidden="true">◷</span><strong id="annual-time">2,8 dias</strong><small>no trono por ano</small></div><div><span aria-hidden="true">🧻</span><strong id="paper">27 rolos</strong><small>de papel estimados / ano</small></div></div>
+        <button type="button" class="button share-button" id="share-open">Compartilhar meu extrato <span aria-hidden="true">↗</span></button>
+        <div class="receipt-bottom">CAGÔMETRO <span>COMPROVANTE NÃO FISCAL ;)</span></div>
+        <span id="calculation-status" class="sr-only" role="status"></span>
+      </article>
+    </section>
+    </div>
+
+    <section class="panel throne" id="trono" aria-labelledby="throne-title">
+      <div class="throne-copy"><span class="section-kicker">MODO TRONO</span><h2 id="throne-title">Já está em reunião?</h2><p id="timer-message">Dê o play. Deixe a natureza trabalhar por você.</p></div>
+      <div class="timer-metrics"><div><span class="timer-label">TEMPO DE SESSÃO</span><strong id="timer">00:00:00</strong></div><div><span class="timer-label">RENDIMENTO AO VIVO</span><strong id="timer-money">R$ 0,00</strong></div></div>
+      <div class="timer-buttons"><button class="button primary" id="timer-toggle">▶ Estou no trono</button><button class="text-button" id="timer-end" disabled>Encerrar sessão</button></div>
+    </section>
+
+    <section class="achievements" aria-labelledby="achievement-title"><div class="section-title"><div><span class="section-kicker">PLANO DE CARREIRA</span><h2 id="achievement-title">Talento reconhecido.</h2></div><span class="muted" id="badge-count">1 de 3 conquistas</span></div>
+      <div class="badge-grid"><article class="badge" id="badge-junior"><span class="badge-icon" aria-hidden="true">☕</span><div><h3>Procrastinador Júnior</h3><p>Seu primeiro cálculo. Bem-vindo à firma.</p><small class="badge-state">DESBLOQUEADO</small></div></article><article class="badge locked" id="badge-lord"><span class="badge-icon" aria-hidden="true">♛</span><div><h3>Lorde do Trono</h3><p>Renda de R$ 200/mês nas pausas.</p><small class="badge-state">BLOQUEADO</small></div></article><article class="badge locked" id="badge-hr"><span class="badge-icon" aria-hidden="true">♜</span><div><h3>Inimigo do RH</h3><p>Uma sessão de 30 minutos no trono.</p><small class="badge-state">BLOQUEADO</small></div></article></div>
+    </section>
+    <section class="how"><details><summary>Tá, mas como essa conta funciona? <span aria-hidden="true">+</span></summary><p>Dividimos o salário pelos dias trabalhados e pelas horas por dia para encontrar o valor da sua hora. Multiplicamos esse valor pelo tempo diário no banheiro. O ano considera 12 meses iguais, sem férias, feriados ou 13º. O tempo anual é convertido em dias de 24 horas. Para o papel, a brincadeira estima 20 folhas por dia de trabalho e 200 folhas por rolo. Não é renda extra: é uma estimativa da parcela do seu salário correspondente às pausas.</p></details><details><summary>Últimas sessões no trono <span aria-hidden="true">+</span></summary><ul id="history"><li>Nenhuma sessão ainda. Seu reinado começa no play.</li></ul></details></section>
+    <aside class="closing"><span aria-hidden="true">✳</span> Pequenas pausas. Grandes rendimentos.<span>O RH não precisa saber.</span></aside>
+  </main>
+  <footer class="shell footer"><a class="brand" href="#">🧻 Cagômetro</a><p>Feito com humor. E tempo de expediente.</p><span>Uma brincadeira, não uma recomendação financeira.</span></footer>
+  <dialog id="share-dialog" aria-labelledby="share-title"><div class="dialog-heading"><h2 id="share-title">Manda no grupo da firma.</h2><button class="theme-toggle" id="share-close" aria-label="Fechar compartilhamento">×</button></div><canvas id="share-card" width="1200" height="630" aria-label="Card com seu rendimento mensal" role="img"></canvas><div class="dialog-actions"><button class="button primary" id="download-card">Baixar card PNG ↓</button><button class="button secondary" id="copy-link">Copiar link</button></div><p id="share-status" role="status">Pronto para salvar e compartilhar onde quiser.</p></dialog>
+  <p class="toast" id="toast" role="status" hidden></p>
+</body>
+</html>
