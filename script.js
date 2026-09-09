@@ -2,7 +2,7 @@
 const $ = (id) => document.getElementById(id);
 const brl = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
 const number = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 1 });
-const KEY = 'cagometro-v1';
+const KEY = 'cocoladora-v1';
 let saved = {};
 try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch { /* Continua funcionando sem armazenamento. */ }
 if (typeof saved !== 'object' || Array.isArray(saved)) saved = {};
@@ -93,7 +93,7 @@ function drawCard() {
   const canvas = $('share-card'), c = canvas.getContext('2d');
   c.fillStyle = '#101216'; c.fillRect(0, 0, 1200, 630);
   c.fillStyle = '#ffbd45'; c.fillRect(65, 62, 9, 42);
-  c.font = '600 36px Outfit, sans-serif'; c.fillText('Cagômetro', 92, 97);
+  c.font = '600 36px Outfit, sans-serif'; c.fillText('cocoladora', 92, 97);
   c.fillStyle = '#a3a7ad'; c.font = '20px Space Grotesk, monospace'; c.fillText('EXTRATO DA PAUSA REMUNERADA', 66, 171);
   c.fillStyle = '#f5f3eb'; c.font = '500 40px Outfit, sans-serif'; c.fillText('Este mês eu ganhei', 66, 245);
   c.fillStyle = '#ffbd45'; let fontSize = 100; const value = brl.format(result.monthly);
@@ -101,7 +101,7 @@ function drawCard() {
   c.fillText(value, 60, 365);
   c.fillStyle = '#f5f3eb'; c.font = '500 40px Outfit, sans-serif'; c.fillText('só cagando na empresa!', 66, 432);
   c.strokeStyle = '#353940'; c.setLineDash([6, 7]); c.beginPath(); c.moveTo(66, 483); c.lineTo(1134, 483); c.stroke(); c.setLineDash([]);
-  c.fillStyle = '#a3a7ad'; c.font = '23px Outfit, sans-serif'; c.fillText('Faça seu cálculo no Cagômetro.', 66, 548);
+  c.fillStyle = '#a3a7ad'; c.font = '23px Outfit, sans-serif'; c.fillText('Faça seu cálculo no cocoladora.', 66, 548);
   c.fillStyle = '#ffbd45'; c.font = '18px Outfit, sans-serif'; c.fillText('O RH não precisa saber.', 912, 548);
 }
 $('share-open').addEventListener('click', async () => { drawCard(); $('share-dialog').showModal(); $('share-status').textContent = 'Pronto para salvar e compartilhar onde quiser.'; await document.fonts.ready; drawCard(); });
@@ -110,7 +110,7 @@ $('share-dialog').addEventListener('click', e => { if (e.target === $('share-dia
 $('download-card').addEventListener('click', () => {
   $('share-card').toBlob(blob => {
     if (!blob) { $('share-status').textContent = 'Não foi possível gerar o PNG. Tente novamente.'; return; }
-    const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = 'meu-extrato-cagometro.png'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 10000);
+    const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = 'meu-extrato-cocoladora.png'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 10000);
     $('share-status').textContent = 'Card gerado! Confira os downloads do navegador.';
   }, 'image/png');
 });

@@ -10,4 +10,4 @@ http.createServer((req, res) => {
   const file = path.resolve(root, '.' + (name === '/' ? '/index.html' : name));
   if (!file.startsWith(root + path.sep) || !types[path.extname(file)]) { res.writeHead(404); res.end('Não encontrado'); return; }
   fs.readFile(file, (error, data) => { if (error) { res.writeHead(404); res.end('Não encontrado'); return; } res.writeHead(200, { 'Content-Type': types[path.extname(file)], 'Cache-Control': 'no-store' }); res.end(data); });
-}).listen(4173, '127.0.0.1', () => console.log('Cagômetro em http://localhost:4173'));
+}).listen(4173, '127.0.0.1', () => console.log('cocoladora em http://localhost:4173'));

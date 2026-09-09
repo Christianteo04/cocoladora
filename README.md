@@ -1,18 +1,22 @@
 <div align="center">
 
-# 💩 Cagômetro
+# cocoladora
+
+# 💩 cocoladora
 
 ### Descubra quanto do seu salário está sendo investido em momentos de reflexão.
 
 Uma calculadora divertida para estimar o valor financeiro das suas pausas remuneradas — porque produtividade também é saber a hora de ir ao banheiro. 🚽💸
 
-![Cagômetro](og-image.png)
+![cocoladora](og-image.png)
+
+A imagem `og-image.png` tem 1200 × 630 pixels. Antes de publicar, substitua **todas** as ocorrências de `https://cocoladora.example` em `index.html` pelo domínio HTTPS público definitivo. O domínio é um marcador reservado, não um endereço de produção. As URLs absolutas de Open Graph e Twitter devem estar presentes no HTML, sem depender de JavaScript. Hospede os arquivos estáticos com acesso público, incluindo a imagem e os ícones. O servidor local não é destinado à produção.
 
 </div>
 
 ---
 
-## ✨ O que o Cagômetro faz?
+## ✨ O que o cocoladora faz?
 
 - Calcula quanto vale cada minuto do seu trabalho.
 - Estima o valor de uma pausa remunerada.
@@ -41,7 +45,7 @@ Não é necessário instalar dependências ou executar uma etapa de build.
 
 ## 🧮 Como os cálculos funcionam?
 
-O Cagômetro usa:
+O cocoladora usa:
 
 - Salário mensal;
 - Dias trabalhados;
@@ -90,11 +94,11 @@ Porque alguém precisava responder, com dados, à pergunta:
 
 > “Quanto vale exatamente essa pausa que eu acabei de fazer?”
 
-O Cagômetro transforma uma dúvida existencial em gráficos, números e uma quantidade questionável de orgulho.
+O cocoladora transforma uma dúvida existencial em gráficos, números e uma quantidade questionável de orgulho.
 
 ## ⚠️ Antes de publicar
 
-As URLs `https://cagometro.example` presentes no HTML são apenas marcadores. Substitua-as pelo domínio público definitivo para que os previews de compartilhamento funcionem corretamente.
+As URLs `https://cocoladora.example` presentes no HTML são apenas marcadores. Substitua-as pelo domínio público definitivo para que os previews de compartilhamento funcionem corretamente.
 
 ## 🤝 Contribuições
 
