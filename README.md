@@ -1,21 +1,111 @@
-# Cagômetro
+<div align="center">
 
-HTML, CSS e JavaScript puro, sem dependências de execução ou etapa de build.
+# 💩 Cagômetro
 
-Execute `node server.cjs` e abra http://localhost:4173.
+### Descubra quanto do seu salário está sendo investido em momentos de reflexão.
 
-## Compartilhamento em produção
+Uma calculadora divertida para estimar o valor financeiro das suas pausas remuneradas — porque produtividade também é saber a hora de ir ao banheiro. 🚽💸
 
-A imagem `og-image.png` tem 1200 × 630 pixels. Antes de publicar, substitua **todas** as ocorrências de `https://cagometro.example` em `index.html` pelo domínio HTTPS público definitivo. O domínio é um marcador reservado, não um endereço de produção. As URLs absolutas de Open Graph e Twitter devem estar presentes no HTML, sem depender de JavaScript. Hospede os arquivos estáticos com acesso público, incluindo a imagem e os ícones. O servidor local não é destinado à produção.
+![Cagômetro](og-image.png)
 
-WhatsApp e outras plataformas precisam acessar o site pela internet para gerar o preview. A visualização local não valida o cache nem a renderização nessas plataformas. A imagem melhora a apresentação do compartilhamento; não garante cliques ou posicionamento no Google.
+</div>
 
-## Funcionamento
+---
 
-O cálculo considera salário mensal / dias / horas e o tempo de pausa informado. A projeção usa 12 meses, sem férias, feriados ou 13º. Papel: 20 folhas por dia, 200 folhas por rolo. Valores são estimativas recreativas de parte do salário, não renda adicional. O cronômetro mantém a tarifa do início da sessão, mesmo que outro cálculo seja feito depois. Salário, tema, conquistas e as últimas 10 sessões encerradas ficam no localStorage. Uma sessão em andamento não sobrevive ao recarregamento da página.
+## ✨ O que o Cagômetro faz?
 
-A interface usa fontes do Google Fonts, com alternativas locais. Nenhum dado dos formulários é enviado a um servidor. Não há analytics.
+- Calcula quanto vale cada minuto do seu trabalho.
+- Estima o valor de uma pausa remunerada.
+- Mantém um cronômetro da sessão atual.
+- Mostra projeções mensais e anuais.
+- Registra suas últimas sessões no navegador.
+- Desbloqueia conquistas absurdamente importantes.
+- Funciona com temas claro e escuro.
+- Não envia seus dados para nenhum servidor.
 
-## Imagem
+## 🚀 Como executar
 
-Gerada com a ferramenta integrada de imagens e redimensionada para 1200 × 630. O prompt está em `og-image-prompt.txt`.
+Você só precisa ter o [Node.js](https://nodejs.org/) instalado:
+
+```bash
+node server.cjs
+```
+
+Depois, abra no navegador:
+
+```text
+http://localhost:4173
+```
+
+Não é necessário instalar dependências ou executar uma etapa de build.
+
+## 🧮 Como os cálculos funcionam?
+
+O Cagômetro usa:
+
+- Salário mensal;
+- Dias trabalhados;
+- Horas por dia;
+- Tempo estimado da pausa.
+
+As projeções consideram 12 meses, sem férias, feriados ou 13º salário.
+
+Os valores são estimativas recreativas — não representam renda adicional, consultoria financeira ou autorização oficial para passar o dia no banheiro.
+
+## 🔒 Privacidade
+
+Seus dados ficam somente no `localStorage` do navegador.
+
+O projeto:
+
+- Não possui backend;
+- Não usa analytics;
+- Não envia dados dos formulários;
+- Não cria uma conta para controlar suas pausas;
+- Não conta para ninguém que você demorou 47 minutos.
+
+## 🛠️ Tecnologias
+
+- HTML semântico;
+- CSS puro;
+- JavaScript puro;
+- Node.js para um servidor local mínimo;
+- `localStorage` para persistência no navegador.
+
+## 📁 Estrutura do projeto
+
+```text
+├── index.html              # Interface principal
+├── style.css               # Estilos, temas e responsividade
+├── script.js               # Cálculos e interações
+├── server.cjs              # Servidor local
+├── og-image.png            # Imagem para compartilhamento
+├── favicon.svg             # Ícone do projeto
+└── README.md               # Este documento importantíssimo
+```
+
+## 🎯 Por que este projeto existe?
+
+Porque alguém precisava responder, com dados, à pergunta:
+
+> “Quanto vale exatamente essa pausa que eu acabei de fazer?”
+
+O Cagômetro transforma uma dúvida existencial em gráficos, números e uma quantidade questionável de orgulho.
+
+## ⚠️ Antes de publicar
+
+As URLs `https://cagometro.example` presentes no HTML são apenas marcadores. Substitua-as pelo domínio público definitivo para que os previews de compartilhamento funcionem corretamente.
+
+## 🤝 Contribuições
+
+Encontrou um bug? Teve uma ideia? Descobriu que sua pausa vale mais que seu salário?
+
+Abra uma issue ou envie um pull request. Toda contribuição é bem-vinda — especialmente as que melhoram os cálculos e pioram a seriedade do projeto.
+
+---
+
+<div align="center">
+
+Feito com JavaScript, CSS e muitas pausas estratégicas. 💩
+
+</div>
